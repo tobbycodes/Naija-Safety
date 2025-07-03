@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Citizen Accident Reporter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🚨 Report an Accident</h1>
+    <form id="incidentForm">
+      <label>Title</label>
+      <input type="text" id="title" required placeholder="E.g. Car crash on 3rd mainland bridge">
+
+      <label>Category</label>
+      <select id="category">
+        <option>Accident</option>
+        <option>Fighting</option>
+        <option>Rioting</option>
+        <option>Other</option>
+      </select>
+
+      <label>Description</label>
+      <textarea id="description" rows="4" placeholder="Describe what happened"></textarea>
+
+      <label>Location</label>
+      <input type="text" id="location" readonly placeholder="Detecting location...">
+
+      <label>Photo (optional)</label>
+      <input type="file" id="photo">
+
+      <button type="submit">Submit Incident</button>
+    </form>
+
+    <hr>
+
+    <h2>🗂️ Recent Incidents</h2>
+    <div id="incidentList"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
